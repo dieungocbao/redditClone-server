@@ -1,4 +1,4 @@
-import { Post } from '../entities/Post'
+import { Post } from '../entities/post.entity'
 import { MyContext } from 'src/types'
 import { Resolver, Query, Ctx, Arg, Int, Mutation } from 'type-graphql'
 
@@ -31,6 +31,7 @@ export class PostResolver {
   @Mutation(() => Post, { nullable: true })
   async updatePost(
     @Arg('id', () => Int) id: number,
+    @Arg('title') title: string,
     @Ctx() { em }: MyContext
   ): Promise<Post | null> {
     const post = await em.findOne(Post, { _id: id })

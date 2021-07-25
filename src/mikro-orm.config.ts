@@ -2,7 +2,7 @@ import { Options } from '@mikro-orm/core'
 import { Post } from './entities/post.entity'
 import { __prod__ } from './constants'
 import path from 'path'
-import { User } from './entities/User.entity'
+import { User } from './entities/user.entity'
 
 const config: Options = {
   migrations: {

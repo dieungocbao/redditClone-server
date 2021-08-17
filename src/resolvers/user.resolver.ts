@@ -1,4 +1,4 @@
-import { MyContext } from '../types'
+import { MyContext } from "../types"
 import {
   Resolver,
   Ctx,
@@ -7,9 +7,10 @@ import {
   InputType,
   Field,
   ObjectType,
-} from 'type-graphql'
-import { User } from '../entities/user.entity'
-import argon2 from 'argon2'
+} from "type-graphql"
+import { User } from "../entities/user.entity"
+import argon2 from "argon2"
+import { EntityManager } from "@mikro-orm/postgresql"
 
 @InputType()
 class UsernamePasswordInput {
@@ -40,15 +41,15 @@ class UserResponse {
 export class UserResolver {
   @Mutation(() => UserResponse)
   async register(
-    @Arg('input') input: UsernamePasswordInput,
+    @Arg("input") input: UsernamePasswordInput,
     @Ctx() { em }: MyContext
   ): Promise<UserResponse> {
     if (input?.username.length < 6) {
       return {
         errors: [
           {
-            field: 'username',
-            message: 'username length must be greater then 6',
+            field: "username",
+            message: "username length must be greater then 6",
           },
         ],
       }
@@ -57,28 +58,36 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: 'password',
-            message: 'password length must be greater then 6',
+            field: "password",
+            message: "password length must be greater then 6",
           },
         ],
       }
     }
 
     const hashedPassword = await argon2.hash(input.password)
-    const user = em.create(User, {
-      username: input.username,
-      password: hashedPassword,
-    })
+
+    let user
 
     try {
-      await em.persistAndFlush(user)
+      const result = await (em as EntityManager)
+        .createQueryBuilder(User)
+        .getKnexQuery()
+        .insert({
+          username: input.username,
+          password: hashedPassword,
+          created_at: new Date(),
+          updated_at: new Date(),
+        })
+        .returning("*")
+      user = result[0]
     } catch (err) {
-      if (err.code === '23505') {
+      if (err.code === "23505") {
         return {
           errors: [
             {
-              field: 'username',
-              message: 'username already taken',
+              field: "username",
+              message: "username already taken",
             },
           ],
         }
@@ -89,7 +98,7 @@ export class UserResolver {
 
   @Mutation(() => UserResponse)
   async login(
-    @Arg('input') input: UsernamePasswordInput,
+    @Arg("input") input: UsernamePasswordInput,
     @Ctx() { em, req }: MyContext
   ): Promise<UserResponse> {
     const user = await em.findOne(User, {
@@ -99,7 +108,7 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: 'username',
+            field: "username",
             message: "That user doesn't exist",
           },
         ],
@@ -110,8 +119,8 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: 'password',
-            message: 'incorrect password',
+            field: "password",
+            message: "incorrect password",
           },
         ],
       }

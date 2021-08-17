@@ -48,6 +48,29 @@ const main = async () => {
     })
   )
 
+  const RedisStore = connectRedis(session)
+  const redisClient = redis.createClient()
+
+  app.use(
+    session({
+      name: 'qid',
+      store: new RedisStore({
+        client: redisClient,
+        disableTouch: true,
+        disableTTL: true,
+      }),
+      cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 465 * 10, // 10 years
+        httpOnly: true,
+        sameSite: 'lax', // csrf
+        secure: __prod__, // https only
+      },
+      saveUninitialized: false,
+      secret: 'dieungocbao',
+      resave: false,
+    })
+  )
+
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [PostResolver, UserResolver],

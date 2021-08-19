@@ -7,10 +7,12 @@ import {
   InputType,
   Field,
   ObjectType,
+  Query,
 } from "type-graphql"
 import { User } from "../entities/user.entity"
 import argon2 from "argon2"
 import { EntityManager } from "@mikro-orm/postgresql"
+import { COOKIE_NAME } from "../constants"
 
 @InputType()
 class UsernamePasswordInput {
@@ -39,6 +41,15 @@ class UserResponse {
 
 @Resolver()
 export class UserResolver {
+  @Query(() => User, { nullable: true })
+  async me(@Ctx() { req, em }: MyContext) {
+    if (!req.session.userId) {
+      return null
+    }
+    const user = await em.findOne(User, { _id: +req.session.userId })
+    return user
+  }
+
   @Mutation(() => UserResponse)
   async register(
     @Arg("input") input: UsernamePasswordInput,
@@ -128,5 +139,20 @@ export class UserResolver {
 
     req.session.userId = user._id
     return { user }
+  }
+
+  @Mutation(() => Boolean)
+  async logout(@Ctx() { req, res }: MyContext) {
+    return new Promise((resolve) => {
+      req.session.destroy((err) => {
+        res.clearCookie(COOKIE_NAME)
+        if (err) {
+          console.log(err)
+          resolve(false)
+          return
+        }
+        resolve(true)
+      })
+    })
   }
 }

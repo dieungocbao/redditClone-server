@@ -11,9 +11,11 @@ import {
 import { User } from "../entities/user.entity"
 import argon2 from "argon2"
 import { EntityManager } from "@mikro-orm/postgresql"
-import { COOKIE_NAME } from "../constants"
+import { COOKIE_NAME, FORGET_PASSWORD_PREFIX } from "../constants"
 import { UsernamePasswordInput } from "../dto/UsernamePasswordInput"
 import { validateRegister } from "../utils/validateRegister"
+import { sendEmail } from "../utils/sendEmail"
+import { v4 } from "uuid"
 
 @ObjectType()
 class FieldError {
@@ -35,7 +37,7 @@ class UserResponse {
 @Resolver()
 export class UserResolver {
   @Query(() => User, { nullable: true })
-  async me(@Ctx() { req, em }: MyContext) {
+  async me(@Ctx() { req, em }: MyContext): Promise<User | null> {
     if (!req.session.userId) {
       return null
     }
@@ -71,12 +73,17 @@ export class UserResolver {
         .returning("*")
       user = result[0]
     } catch (err) {
+      console.log(err)
       if (err.code === "23505") {
         return {
           errors: [
             {
-              field: "username",
-              message: "username already taken",
+              field:
+                err.constraint === "user_email_unique" ? "email" : "username",
+              message:
+                err.constraint === "user_email_unique"
+                  ? "email already taken"
+                  : "username already taken",
             },
           ],
         }
@@ -128,7 +135,7 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  async logout(@Ctx() { req, res }: MyContext) {
+  async logout(@Ctx() { req, res }: MyContext): Promise<Boolean> {
     return new Promise((resolve) => {
       req.session.destroy((err) => {
         res.clearCookie(COOKIE_NAME)
@@ -143,8 +150,74 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  async forgotpassword(
+  async forgotPassword(
     @Arg("email") email: string,
-    @Ctx() { req }: MyContext
-  ) {}
+    @Ctx() { em, redis }: MyContext
+  ): Promise<Boolean> {
+    const user = await em.findOne(User, { email })
+    if (!user) {
+      return true
+    }
+
+    const token = v4()
+    redis.set(FORGET_PASSWORD_PREFIX + token, user._id, "ex", 1000 * 15) // 15 minutes expire
+
+    await sendEmail(
+      email,
+      `<a href="http://localhost:3000/change-password/${token}">Reset password</a>`
+    )
+
+    return true
+  }
+
+  @Mutation(() => UserResponse)
+  async changePassword(
+    @Arg("token") token: string,
+    @Arg("newPassword") newPassword: string,
+    @Ctx() { redis, em }: MyContext
+  ): Promise<UserResponse> {
+    if (newPassword.length < 6) {
+      return {
+        errors: [
+          {
+            field: "newPassword",
+            message: "length must be greater than 6",
+          },
+        ],
+      }
+    }
+
+    const redisKeyForgetPassword = FORGET_PASSWORD_PREFIX + token
+
+    const userId = await redis.get(redisKeyForgetPassword)
+    if (!userId) {
+      return {
+        errors: [
+          {
+            field: "token",
+            message: "token expired",
+          },
+        ],
+      }
+    }
+
+    const user = await em.findOne(User, { _id: +userId })
+    if (!user) {
+      return {
+        errors: [
+          {
+            field: "token",
+            message: "user no longer exists",
+          },
+        ],
+      }
+    }
+
+    user.password = await argon2.hash(newPassword)
+    await em.persistAndFlush(user)
+
+    await redis.del(redisKeyForgetPassword)
+
+    return { user }
+  }
 }

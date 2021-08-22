@@ -24,6 +24,7 @@ import { Post } from "./entities/post.entity"
 import { User } from "./entities/user.entity"
 import Logger from "./configs/logger"
 import morganMiddleware from "./configs/morganMiddleware"
+import { authChecker } from "./guard/auth-checker"
 
 const main = async () => {
   try {
@@ -72,11 +73,14 @@ const main = async () => {
     })
   )
 
+  const schema = await buildSchema({
+    resolvers: [PostResolver, UserResolver],
+    validate: false,
+    authChecker,
+  })
+
   const apolloServer = new ApolloServer({
-    schema: await buildSchema({
-      resolvers: [PostResolver, UserResolver],
-      validate: false,
-    }),
+    schema,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
     context: ({ req, res }): MyContext => ({ req, res, redis }),
   })

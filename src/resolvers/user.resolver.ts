@@ -7,6 +7,7 @@ import {
   Field,
   ObjectType,
   Query,
+  Authorized,
 } from "type-graphql"
 import { User } from "../entities/user.entity"
 import argon2 from "argon2"
@@ -36,6 +37,7 @@ class UserResponse {
 
 @Resolver()
 export class UserResolver {
+  @Authorized()
   @Query(() => User, { nullable: true })
   async me(@Ctx() { req }: MyContext): Promise<User | null | undefined> {
     if (!req.session.userId) {
@@ -124,6 +126,7 @@ export class UserResolver {
     return { user }
   }
 
+  @Authorized()
   @Mutation(() => Boolean)
   async logout(@Ctx() { req, res }: MyContext): Promise<Boolean> {
     return new Promise((resolve) => {

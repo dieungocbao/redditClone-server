@@ -1,4 +1,6 @@
 # Folder
 node_modules
 dist
+logs
+# File
 .env

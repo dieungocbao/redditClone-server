@@ -15,6 +15,7 @@ import { UsernamePasswordInput } from "../dto/UsernamePasswordInput"
 import { validateRegister } from "../utils/validateRegister"
 import { sendEmail } from "../utils/sendEmail"
 import { v4 } from "uuid"
+import Logger from "../configs/logger"
 
 @ObjectType()
 class FieldError {
@@ -63,7 +64,7 @@ export class UserResolver {
         email: input.email,
       }).save()
     } catch (err) {
-      console.log(err)
+      Logger.error(err)
       if (err.code === "23505") {
         return {
           errors: [
@@ -129,7 +130,7 @@ export class UserResolver {
       req.session.destroy((err) => {
         res.clearCookie(COOKIE_NAME)
         if (err) {
-          console.log(err)
+          Logger.error(err)
           resolve(false)
           return
         }

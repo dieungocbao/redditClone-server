@@ -1,0 +1,3365 @@
+2021-08-22 16:25:27:2527 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:26:06:266 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:27:26:2726 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:27:34:2734 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:31:47:3147 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:31:50:3150 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:36:23:3623 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:36:29:3629 [35mhttp[39m: [35mPOST /graphql 200 24743 - 38.026 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:30:3630 [35mhttp[39m: [35mPOST /graphql 200 77 - 57.834 ms[39m
+[35mGraphQL mutation {[39m
+[35m  login(usernameOrEmail: "dieungocbao", password: "123456") {[39m
+[35m    errors {[39m
+[35m      field[39m
+[35m      message[39m
+[35m    }[39m
+[35m    user {[39m
+[35m      _id[39m
+[35m      username[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:31:3631 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.096 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:33:3633 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.925 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:35:3635 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.887 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:37:3637 [35mhttp[39m: [35mPOST /graphql 200 24743 - 7.240 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:39:3639 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.798 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:41:3641 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.496 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:43:3643 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.729 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:48:3648 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:36:51:3651 [35mhttp[39m: [35mPOST /graphql 200 24743 - 44.848 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:53:3653 [35mhttp[39m: [35mPOST /graphql 200 24743 - 17.103 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:53:3653 [35mhttp[39m: [35mPOST /graphql 200 77 - 63.772 ms[39m
+[35mGraphQL mutation {[39m
+[35m  login(usernameOrEmail: "dieungocbao", password: "123456") {[39m
+[35m    errors {[39m
+[35m      field[39m
+[35m      message[39m
+[35m    }[39m
+[35m    user {[39m
+[35m      _id[39m
+[35m      username[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:55:3655 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.901 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:57:3657 [35mhttp[39m: [35mPOST /graphql 200 24743 - 6.537 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:36:59:3659 [35mhttp[39m: [35mPOST /graphql 200 24743 - 6.561 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:01:371 [35mhttp[39m: [35mPOST /graphql 200 24743 - 6.171 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:03:373 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.681 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:05:375 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.402 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:07:377 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.969 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:09:379 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.359 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:11:3711 [35mhttp[39m: [35mPOST /graphql 200 24743 - 16.048 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:13:3713 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.441 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:15:3715 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.161 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:17:3717 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.765 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:19:3719 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.463 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:21:3721 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.605 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:24:3724 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:37:28:3728 [35mhttp[39m: [35mPOST /graphql 200 24743 - 36.739 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:28:3728 [35mhttp[39m: [35mPOST /graphql 200 77 - 60.288 ms[39m
+[35mGraphQL mutation {[39m
+[35m  login(usernameOrEmail: "dieungocbao", password: "123456") {[39m
+[35m    errors {[39m
+[35m      field[39m
+[35m      message[39m
+[35m    }[39m
+[35m    user {[39m
+[35m      _id[39m
+[35m      username[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:30:3730 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.985 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:32:3732 [35mhttp[39m: [35mPOST /graphql 200 24743 - 15.405 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:34:3734 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.395 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:36:3736 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.868 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:38:3738 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.866 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:40:3740 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.571 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:42:3742 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.845 ms[39m
+[35mGraphQL query IntrospectionQuery {[39m
+[35m  __schema {[39m
+[35m    queryType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    mutationType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    subscriptionType {[39m
+[35m      name[39m
+[35m    }[39m
+[35m    types {[39m
+[35m      ...FullType[39m
+[35m    }[39m
+[35m    directives {[39m
+[35m      name[39m
+[35m      description[39m
+[35m      locations[39m
+[35m      args {[39m
+[35m        ...InputValue[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment FullType on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  description[39m
+[35m  fields(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    args {[39m
+[35m      ...InputValue[39m
+[35m    }[39m
+[35m    type {[39m
+[35m      ...TypeRef[39m
+[35m    }[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  inputFields {[39m
+[35m    ...InputValue[39m
+[35m  }[39m
+[35m  interfaces {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  enumValues(includeDeprecated: true) {[39m
+[35m    name[39m
+[35m    description[39m
+[35m    isDeprecated[39m
+[35m    deprecationReason[39m
+[35m  }[39m
+[35m  possibleTypes {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m}[39m
+
+[35mfragment InputValue on __InputValue {[39m
+[35m  name[39m
+[35m  description[39m
+[35m  type {[39m
+[35m    ...TypeRef[39m
+[35m  }[39m
+[35m  defaultValue[39m
+[35m}[39m
+
+[35mfragment TypeRef on __Type {[39m
+[35m  kind[39m
+[35m  name[39m
+[35m  ofType {[39m
+[35m    kind[39m
+[35m    name[39m
+[35m    ofType {[39m
+[35m      kind[39m
+[35m      name[39m
+[35m      ofType {[39m
+[35m        kind[39m
+[35m        name[39m
+[35m        ofType {[39m
+[35m          kind[39m
+[35m          name[39m
+[35m          ofType {[39m
+[35m            kind[39m
+[35m            name[39m
+[35m            ofType {[39m
+[35m              kind[39m
+[35m              name[39m
+[35m              ofType {[39m
+[35m                kind[39m
+[35m                name[39m
+[35m              }[39m
+[35m            }[39m
+[35m          }[39m
+[35m        }[39m
+[35m      }[39m
+[35m    }[39m
+[35m  }[39m
+[35m}[39m
+[35m[39m
+2021-08-22 16:37:44:3744 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:37:51:3751 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:37:51:3751 [35mhttp[39m: [35mPOST /graphql 200 24743 - 43.210 ms[39m
+2021-08-22 16:37:53:3753 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.524 ms[39m
+2021-08-22 16:37:55:3755 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.194 ms[39m
+2021-08-22 16:37:57:3757 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.214 ms[39m
+2021-08-22 16:37:59:3759 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.220 ms[39m
+2021-08-22 16:38:02:382 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.750 ms[39m
+2021-08-22 16:38:04:384 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.485 ms[39m
+2021-08-22 16:38:06:386 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.489 ms[39m
+2021-08-22 16:38:08:388 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.440 ms[39m
+2021-08-22 16:38:10:3810 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.039 ms[39m
+2021-08-22 16:38:12:3812 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.598 ms[39m
+2021-08-22 16:38:14:3814 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.096 ms[39m
+2021-08-22 16:38:16:3816 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.560 ms[39m
+2021-08-22 16:38:18:3818 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.588 ms[39m
+2021-08-22 16:38:20:3820 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.772 ms[39m
+2021-08-22 16:38:22:3822 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.063 ms[39m
+2021-08-22 16:38:24:3824 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.601 ms[39m
+2021-08-22 16:38:26:3826 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.689 ms[39m
+2021-08-22 16:38:28:3828 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.150 ms[39m
+2021-08-22 16:38:30:3830 [35mhttp[39m: [35mPOST /graphql 200 24743 - 19.505 ms[39m
+2021-08-22 16:38:32:3832 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.833 ms[39m
+2021-08-22 16:38:34:3834 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.154 ms[39m
+2021-08-22 16:38:36:3836 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.175 ms[39m
+2021-08-22 16:38:38:3838 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.993 ms[39m
+2021-08-22 16:38:40:3840 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.077 ms[39m
+2021-08-22 16:38:42:3842 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.538 ms[39m
+2021-08-22 16:38:44:3844 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.592 ms[39m
+2021-08-22 16:42:17:4217 [35mhttp[39m: [35mPOST /graphql 200 77 - 80.158 ms[39m
+2021-08-22 16:42:18:4218 [35mhttp[39m: [35mPOST /graphql 200 24743 - 16.921 ms[39m
+2021-08-22 16:42:20:4220 [35mhttp[39m: [35mPOST /graphql 200 24743 - 17.186 ms[39m
+2021-08-22 16:42:22:4222 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.849 ms[39m
+2021-08-22 16:42:24:4224 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.409 ms[39m
+2021-08-22 16:42:26:4226 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.905 ms[39m
+2021-08-22 16:42:28:4228 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.481 ms[39m
+2021-08-22 16:42:30:4230 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.793 ms[39m
+2021-08-22 16:42:32:4232 [35mhttp[39m: [35mPOST /graphql 200 24743 - 6.349 ms[39m
+2021-08-22 16:42:34:4234 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.134 ms[39m
+2021-08-22 16:42:36:4236 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.616 ms[39m
+2021-08-22 16:42:38:4238 [35mhttp[39m: [35mPOST /graphql 200 24743 - 7.900 ms[39m
+2021-08-22 16:42:40:4240 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.029 ms[39m
+2021-08-22 16:42:42:4242 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.265 ms[39m
+2021-08-22 16:42:44:4244 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.082 ms[39m
+2021-08-22 16:45:41:4541 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:45:52:4552 [35mhttp[39m: [35mPOST /graphql 200 77 - 86.894 ms[39m
+2021-08-22 16:45:53:4553 [35mhttp[39m: [35mPOST /graphql 200 24743 - 20.842 ms[39m
+2021-08-22 16:45:55:4555 [35mhttp[39m: [35mPOST /graphql 200 24743 - 6.444 ms[39m
+2021-08-22 16:45:57:4557 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.196 ms[39m
+2021-08-22 16:45:59:4559 [35mhttp[39m: [35mPOST /graphql 200 24743 - 7.617 ms[39m
+2021-08-22 16:46:01:461 [35mhttp[39m: [35mPOST /graphql 200 24743 - 8.182 ms[39m
+2021-08-22 16:46:03:463 [35mhttp[39m: [35mPOST /graphql 200 24743 - 7.631 ms[39m
+2021-08-22 16:46:05:465 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.566 ms[39m
+2021-08-22 16:46:07:467 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.675 ms[39m
+2021-08-22 16:46:09:469 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.024 ms[39m
+2021-08-22 16:46:11:4611 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.934 ms[39m
+2021-08-22 16:46:13:4613 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.892 ms[39m
+2021-08-22 16:46:15:4615 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.842 ms[39m
+2021-08-22 16:46:39:4639 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:46:40:4640 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:46:52:4652 [35mhttp[39m: [35mPOST /graphql 200 77 - 122.804 ms[39m
+2021-08-22 16:46:52:4652 [35mhttp[39m: [35mPOST /graphql 200 24743 - 35.462 ms[39m
+2021-08-22 16:46:54:4654 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.247 ms[39m
+2021-08-22 16:46:56:4656 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.628 ms[39m
+2021-08-22 16:46:58:4658 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.038 ms[39m
+2021-08-22 16:47:00:470 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.597 ms[39m
+2021-08-22 16:47:02:472 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.953 ms[39m
+2021-08-22 16:47:04:474 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.163 ms[39m
+2021-08-22 16:47:06:476 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.629 ms[39m
+2021-08-22 16:47:08:478 [35mhttp[39m: [35mPOST /graphql 200 24743 - 13.048 ms[39m
+2021-08-22 16:47:10:4710 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.033 ms[39m
+2021-08-22 16:47:12:4712 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.123 ms[39m
+2021-08-22 16:47:14:4714 [35mhttp[39m: [35mPOST /graphql 200 24743 - 10.680 ms[39m
+2021-08-22 16:47:16:4716 [35mhttp[39m: [35mPOST /graphql 200 24743 - 9.263 ms[39m
+2021-08-22 16:47:18:4718 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.412 ms[39m
+2021-08-22 16:47:20:4720 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.932 ms[39m
+2021-08-22 16:47:22:4722 [35mhttp[39m: [35mPOST /graphql 200 24743 - 11.477 ms[39m
+2021-08-22 16:47:24:4724 [35mhttp[39m: [35mPOST /graphql 200 24743 - 7.795 ms[39m
+2021-08-22 16:47:26:4726 [35mhttp[39m: [35mPOST /graphql 200 24743 - 14.325 ms[39m
+2021-08-22 16:47:28:4728 [35mhttp[39m: [35mPOST /graphql 200 24743 - 12.527 ms[39m
+2021-08-22 16:47:30:4730 [37mdebug[39m: [37m🚀 Server is starting on localhost:4000[39m
+2021-08-22 16:47:30:4730 [35mhttp[39m: [35mPOST /graphql 200 24743 - 37.357 ms[39m

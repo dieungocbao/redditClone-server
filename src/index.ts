@@ -1,5 +1,4 @@
-import { MikroORM } from "@mikro-orm/core"
-import microCofig from "./mikro-orm.config"
+import "reflect-metadata"
 import express from "express"
 import { ApolloServer } from "apollo-server-express"
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core"
@@ -12,10 +11,24 @@ import connectRedis from "connect-redis"
 import cors from "cors"
 import { COOKIE_NAME, __prod__ } from "./constants"
 import { MyContext } from "./types"
+import { createConnection } from "typeorm"
+import { Post } from "./entities/post.entity"
+import { User } from "./entities/user.entity"
 
 const main = async () => {
-  const orm = await MikroORM.init(microCofig)
-  await orm.getMigrator().up()
+  try {
+    await createConnection({
+      type: "postgres",
+      database: "lireddit2",
+      username: "dieungocbao",
+      password: "ngocbao",
+      logging: true,
+      synchronize: true,
+      entities: [Post, User],
+    })
+  } catch (error) {
+    console.log(error)
+  }
 
   const app = express()
   app.use(
@@ -53,7 +66,7 @@ const main = async () => {
       validate: false,
     }),
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-    context: ({ req, res }): MyContext => ({ em: orm.em, req, res, redis }),
+    context: ({ req, res }): MyContext => ({ req, res, redis }),
   })
   await apolloServer.start()
   apolloServer.applyMiddleware({ app, cors: false })

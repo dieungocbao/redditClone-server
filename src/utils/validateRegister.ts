@@ -1,4 +1,4 @@
-import { UsernamePasswordInput } from "../dto/UsernamePasswordInput"
+import { UsernamePasswordInput } from "../dto/usernamePasswordInput.dto"
 
 export const validateRegister = (input: UsernamePasswordInput) => {
   if (!input?.email.includes("@")) {

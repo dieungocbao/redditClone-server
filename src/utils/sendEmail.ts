@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer"
+import Logger from "../configs/logger"
 
 // async..await is not allowed in global scope, must use a wrapper
 export async function sendEmail(to: string, html: string) {
@@ -21,10 +22,10 @@ export async function sendEmail(to: string, html: string) {
     html,
   })
 
-  console.log("Message sent: %s", info.messageId)
+  Logger.info("Message sent: %s", info.messageId)
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
   // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
+  Logger.info("Preview URL: %s", nodemailer.getTestMessageUrl(info))
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }

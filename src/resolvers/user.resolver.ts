@@ -1,4 +1,4 @@
-import { MyContext } from "../types"
+import { MyContext } from '../types'
 import {
   Resolver,
   Ctx,
@@ -8,15 +8,15 @@ import {
   ObjectType,
   Query,
   Authorized,
-} from "type-graphql"
-import { User } from "../entities/user.entity"
-import argon2 from "argon2"
-import { COOKIE_NAME, FORGET_PASSWORD_PREFIX } from "../constants"
-import { UsernamePasswordInput } from "../dto/usernamePasswordInput.dto"
-import { validateRegister } from "../utils/validateRegister"
-import { sendEmail } from "../utils/sendEmail"
-import { v4 } from "uuid"
-import Logger from "../configs/logger"
+} from 'type-graphql'
+import { User } from '../entities/user.entity'
+import argon2 from 'argon2'
+import { COOKIE_NAME, FORGET_PASSWORD_PREFIX } from '../constants'
+import { UsernamePasswordInput } from '../dto/usernamePasswordInput.dto'
+import { validateRegister } from '../utils/validateRegister'
+import { sendEmail } from '../utils/sendEmail'
+import { v4 } from 'uuid'
+import Logger from '../configs/logger'
 
 @ObjectType()
 class FieldError {
@@ -37,7 +37,6 @@ class UserResponse {
 
 @Resolver()
 export class UserResolver {
-  @Authorized()
   @Query(() => User, { nullable: true })
   async me(@Ctx() { req }: MyContext): Promise<User | null | undefined> {
     if (!req.session.userId) {
@@ -48,7 +47,7 @@ export class UserResolver {
 
   @Mutation(() => UserResponse)
   async register(
-    @Arg("input") input: UsernamePasswordInput
+    @Arg('input') input: UsernamePasswordInput
   ): Promise<UserResponse> {
     const errors = validateRegister(input)
     if (errors) {
@@ -67,16 +66,16 @@ export class UserResolver {
       }).save()
     } catch (err) {
       Logger.error(err)
-      if (err.code === "23505") {
+      if (err.code === '23505') {
         return {
           errors: [
             {
               field:
-                err.constraint === "user_email_unique" ? "email" : "username",
+                err.constraint === 'user_email_unique' ? 'email' : 'username',
               message:
-                err.constraint === "user_email_unique"
-                  ? "email already taken"
-                  : "username already taken",
+                err.constraint === 'user_email_unique'
+                  ? 'email already taken'
+                  : 'username already taken',
             },
           ],
         }
@@ -87,12 +86,12 @@ export class UserResolver {
 
   @Mutation(() => UserResponse)
   async login(
-    @Arg("usernameOrEmail") usernameOrEmail: string,
-    @Arg("password") password: string,
+    @Arg('usernameOrEmail') usernameOrEmail: string,
+    @Arg('password') password: string,
     @Ctx() { req }: MyContext
   ): Promise<UserResponse> {
     const user = await User.findOne(
-      usernameOrEmail.includes("@")
+      usernameOrEmail.includes('@')
         ? {
             where: { email: usernameOrEmail.toLowerCase() },
           }
@@ -104,7 +103,7 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "usernameOrEmail",
+            field: 'usernameOrEmail',
             message: "That user doesn't exist",
           },
         ],
@@ -115,8 +114,8 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "password",
-            message: "incorrect password",
+            field: 'password',
+            message: 'incorrect password',
           },
         ],
       }
@@ -144,7 +143,7 @@ export class UserResolver {
 
   @Mutation(() => Boolean)
   async forgotPassword(
-    @Arg("email") email: string,
+    @Arg('email') email: string,
     @Ctx() { redis }: MyContext
   ): Promise<Boolean> {
     const user = await User.findOne({ where: { email } })
@@ -154,7 +153,7 @@ export class UserResolver {
     }
 
     const token = v4()
-    redis.set(FORGET_PASSWORD_PREFIX + token, user._id, "ex", 1000 * 15) // 15 minutes expire
+    redis.set(FORGET_PASSWORD_PREFIX + token, user._id, 'ex', 1000 * 15) // 15 minutes expire
 
     await sendEmail(
       email,
@@ -166,16 +165,16 @@ export class UserResolver {
 
   @Mutation(() => UserResponse)
   async changePassword(
-    @Arg("token") token: string,
-    @Arg("newPassword") newPassword: string,
+    @Arg('token') token: string,
+    @Arg('newPassword') newPassword: string,
     @Ctx() { redis }: MyContext
   ): Promise<UserResponse> {
     if (newPassword.length < 6) {
       return {
         errors: [
           {
-            field: "newPassword",
-            message: "length must be greater than 6",
+            field: 'newPassword',
+            message: 'length must be greater than 6',
           },
         ],
       }
@@ -188,8 +187,8 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "token",
-            message: "token expired",
+            field: 'token',
+            message: 'token expired',
           },
         ],
       }
@@ -200,8 +199,8 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "token",
-            message: "user no longer exists",
+            field: 'token',
+            message: 'user no longer exists',
           },
         ],
       }

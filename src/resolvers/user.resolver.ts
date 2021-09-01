@@ -8,6 +8,8 @@ import {
   ObjectType,
   Query,
   Authorized,
+  FieldResolver,
+  Root,
 } from 'type-graphql'
 import { User } from '../entities/user.entity'
 import argon2 from 'argon2'
@@ -35,8 +37,18 @@ class UserResponse {
   user?: User
 }
 
-@Resolver()
+@Resolver((of) => User)
 export class UserResolver {
+  @FieldResolver(() => String)
+  email(@Root() user: User, @Ctx() { req }: MyContext) {
+    // only current user can see their own email
+    if (req.session.userId === user._id) {
+      return user.email
+    }
+    // current user cannot see someone else email
+    return ''
+  }
+
   @Query(() => User, { nullable: true })
   async me(@Ctx() { req }: MyContext): Promise<User | null | undefined> {
     if (!req.session.userId) {

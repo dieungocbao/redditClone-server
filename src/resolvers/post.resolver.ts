@@ -1,4 +1,3 @@
-import { Post } from '../entities/post.entity'
 import {
   Resolver,
   Query,
@@ -15,7 +14,7 @@ import {
 import { PostInput } from '../dto/postInput.dto'
 import { MyContext } from '../types'
 import { getConnection } from 'typeorm'
-import { User } from '../entities/user.entity'
+import { User, Post } from '../entities'
 
 @ObjectType()
 class PaginatedPosts {

@@ -16,7 +16,6 @@ import Logger from './configs/logger'
 import morganMiddleware from './configs/morganMiddleware'
 import { authChecker } from './guard/auth-checker'
 import { User, Post, Updoot } from './entities'
-import { UpdootResolver } from './resolvers/updoot.resolver'
 
 const main = async () => {
   try {
@@ -66,7 +65,7 @@ const main = async () => {
   )
 
   const schema = await buildSchema({
-    resolvers: [PostResolver, UserResolver, UpdootResolver],
+    resolvers: [PostResolver, UserResolver],
     validate: false,
     authChecker,
   })

@@ -11,7 +11,7 @@ import {
   FieldResolver,
   Root,
 } from 'type-graphql'
-import { User } from '../entities/user.entity'
+import { User } from '../entities'
 import argon2 from 'argon2'
 import { COOKIE_NAME, FORGET_PASSWORD_PREFIX } from '../constants'
 import { UsernamePasswordInput } from '../dto/usernamePasswordInput.dto'

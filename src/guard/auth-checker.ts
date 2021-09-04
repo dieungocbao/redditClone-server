@@ -1,6 +1,6 @@
-import { AuthChecker } from "type-graphql"
-import { User } from "../entities/user.entity"
-import { MyContext } from "../types"
+import { AuthChecker } from 'type-graphql'
+import { User } from '../entities'
+import { MyContext } from '../types'
 
 // create auth checker function
 export const authChecker: AuthChecker<MyContext> = ({ context: { req } }) =>
@@ -18,7 +18,7 @@ export const authChecker: AuthChecker<MyContext> = ({ context: { req } }) =>
     }
     const user = User.findOne({ _id: +userId })
     if (!user) {
-      throw Error("User not found")
+      throw Error('User not found')
     } else {
       return true
     }

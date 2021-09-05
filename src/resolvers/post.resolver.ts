@@ -111,10 +111,23 @@ export class PostResolver {
     return post
   }
 
+  @Authorized()
   @Mutation(() => Boolean)
-  async deletePost(@Arg('id', () => Int) id: number): Promise<Boolean> {
+  async deletePost(
+    @Arg('id', () => Int) id: number,
+    @Ctx() { req }: MyContext
+  ): Promise<Boolean> {
     try {
-      await Post.delete({ _id: id })
+      const post = await Post.findOne({ _id: id })
+      console.log(post)
+      if (!post) {
+        return false
+      }
+      if (post.creatorId !== +req.session.userId) {
+        throw new Error('Not authorized')
+      }
+      await Updoot.delete({ postId: id })
+      await Post.delete({ _id: id, creatorId: +req.session.userId })
       return true
     } catch {
       return false
@@ -151,7 +164,7 @@ export class PostResolver {
           SET points = points + $1
           WHERE _id = $2
         `,
-          [realValue, postId]
+          [2 * realValue, postId]
         )
       })
     } else if (!updoot) {

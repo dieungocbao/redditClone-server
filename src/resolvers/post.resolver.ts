@@ -96,25 +96,43 @@ export class PostResolver {
     return Post.create({ ...input, creatorId: +req.session.userId }).save()
   }
 
+  @Authorized()
   @Mutation(() => Post, { nullable: true })
   async updatePost(
     @Arg('id', () => Int) id: number,
-    @Arg('title') title: string
+    @Arg('title') title: string,
+    @Arg('text') text: string,
+    @Ctx() { req }: MyContext
   ): Promise<Post | null> {
-    const post = await Post.findOne({ _id: id })
-    if (!post) {
-      return null
-    }
-    if (typeof title !== 'undefined') {
-      await Post.update({ _id: id }, { title })
-    }
-    return post
+    const result = await getConnection()
+      .createQueryBuilder()
+      .update(Post)
+      .set({ title, text })
+      .where('_id = :_id and "creatorId" = :creatorId', {
+        _id: id,
+        creatorId: +req.session.userId,
+      })
+      .returning('*')
+      .execute()
+    return result.raw[0]
   }
 
+  @Authorized()
   @Mutation(() => Boolean)
-  async deletePost(@Arg('id', () => Int) id: number): Promise<Boolean> {
+  async deletePost(
+    @Arg('id', () => Int) id: number,
+    @Ctx() { req }: MyContext
+  ): Promise<Boolean> {
     try {
-      await Post.delete({ _id: id })
+      const post = await Post.findOne({ _id: id })
+      if (!post) {
+        return false
+      }
+      if (post.creatorId !== +req.session.userId) {
+        throw new Error('Not authorized')
+      }
+      await Updoot.delete({ postId: id })
+      await Post.delete({ _id: id, creatorId: +req.session.userId })
       return true
     } catch {
       return false
@@ -151,7 +169,7 @@ export class PostResolver {
           SET points = points + $1
           WHERE _id = $2
         `,
-          [realValue, postId]
+          [2 * realValue, postId]
         )
       })
     } else if (!updoot) {

@@ -96,19 +96,25 @@ export class PostResolver {
     return Post.create({ ...input, creatorId: +req.session.userId }).save()
   }
 
+  @Authorized()
   @Mutation(() => Post, { nullable: true })
   async updatePost(
     @Arg('id', () => Int) id: number,
-    @Arg('title') title: string
+    @Arg('title') title: string,
+    @Arg('text') text: string,
+    @Ctx() { req }: MyContext
   ): Promise<Post | null> {
-    const post = await Post.findOne({ _id: id })
-    if (!post) {
-      return null
-    }
-    if (typeof title !== 'undefined') {
-      await Post.update({ _id: id }, { title })
-    }
-    return post
+    const result = await getConnection()
+      .createQueryBuilder()
+      .update(Post)
+      .set({ title, text })
+      .where('_id = :_id and "creatorId" = :creatorId', {
+        _id: id,
+        creatorId: +req.session.userId,
+      })
+      .returning('*')
+      .execute()
+    return result.raw[0]
   }
 
   @Authorized()
@@ -119,7 +125,6 @@ export class PostResolver {
   ): Promise<Boolean> {
     try {
       const post = await Post.findOne({ _id: id })
-      console.log(post)
       if (!post) {
         return false
       }

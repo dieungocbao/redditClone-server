@@ -17,6 +17,7 @@ import morganMiddleware from './configs/morganMiddleware'
 import { authChecker } from './guard/auth-checker'
 import { User, Post, Updoot } from './entities'
 import { createUserLoader } from './utils/createUserLoader'
+import { createUpdootLoader } from './utils/createUpdootLoader'
 
 const main = async () => {
   try {
@@ -79,6 +80,7 @@ const main = async () => {
       res,
       redis,
       userLoader: createUserLoader(),
+      updootLoader: createUpdootLoader(),
     }),
   })
   await apolloServer.start()

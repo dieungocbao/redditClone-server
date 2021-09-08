@@ -32,8 +32,25 @@ export class PostResolver {
   }
 
   @FieldResolver(() => User)
-  creator(@Root() root: Post) {
-    return User.findOne({ _id: root.creatorId })
+  creator(@Root() root: Post, @Ctx() { userLoader }: MyContext) {
+    return userLoader.load(root.creatorId)
+  }
+
+  @FieldResolver(() => Int, { nullable: true })
+  async voteStatus(
+    @Root() post: Post,
+    @Ctx() { updootLoader, req }: MyContext
+  ) {
+    if (!req.session.userId) {
+      return null
+    }
+
+    const updoot = await updootLoader.load({
+      postId: post._id,
+      userId: +req.session.userId,
+    })
+
+    return updoot ? updoot.value : null
   }
 
   @Query(() => PaginatedPosts)
@@ -45,29 +62,15 @@ export class PostResolver {
     const realLimit = Math.min(limit, 50)
     const realLimitPlusOne = realLimit + 1
     const replacements: any[] = [realLimitPlusOne]
-    let cursorIdx = 3
-    if (req.session.userId) {
-      replacements.push(req.session.userId)
-    }
+    let cursorIdx = 2
     if (cursor) {
       replacements.push(new Date(parseInt(cursor)))
       cursorIdx = replacements.length
     }
     const posts = await getConnection().query(
       `
-        SELECT p.*, 
-        json_build_object(
-          '_id', u._id,
-          'username', u.username,
-          'email', u.email
-        ) creator,
-        ${
-          req.session.userId
-            ? '(SELECT value from UPDOOT WHERE "userId" = $2 AND "postId" = p._id) "voteStatus"'
-            : 'null as "voteStatus"'
-        }
+        SELECT p.*
         FROM POST p
-        INNER JOIN PUBLIC.USER u on u._id = p."creatorId"
         ${cursor ? `WHERE p."createdAt" < $${cursorIdx}` : ''}
         ORDER BY p."createdAt" DESC
         LIMIT $1

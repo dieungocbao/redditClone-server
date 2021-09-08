@@ -56,18 +56,12 @@ export class PostResolver {
     const posts = await getConnection().query(
       `
         SELECT p.*, 
-        json_build_object(
-          '_id', u._id,
-          'username', u.username,
-          'email', u.email
-        ) creator,
         ${
           req.session.userId
             ? '(SELECT value from UPDOOT WHERE "userId" = $2 AND "postId" = p._id) "voteStatus"'
             : 'null as "voteStatus"'
         }
         FROM POST p
-        INNER JOIN PUBLIC.USER u on u._id = p."creatorId"
         ${cursor ? `WHERE p."createdAt" < $${cursorIdx}` : ''}
         ORDER BY p."createdAt" DESC
         LIMIT $1

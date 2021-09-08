@@ -16,6 +16,7 @@ import Logger from './configs/logger'
 import morganMiddleware from './configs/morganMiddleware'
 import { authChecker } from './guard/auth-checker'
 import { User, Post, Updoot } from './entities'
+import { createUserLoader } from './utils/createUserLoader'
 
 const main = async () => {
   try {
@@ -73,7 +74,12 @@ const main = async () => {
   const apolloServer = new ApolloServer({
     schema,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-    context: ({ req, res }): MyContext => ({ req, res, redis }),
+    context: ({ req, res }): MyContext => ({
+      req,
+      res,
+      redis,
+      userLoader: createUserLoader(),
+    }),
   })
   await apolloServer.start()
   apolloServer.applyMiddleware({ app, cors: false })

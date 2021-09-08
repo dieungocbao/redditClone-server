@@ -32,8 +32,8 @@ export class PostResolver {
   }
 
   @FieldResolver(() => User)
-  creator(@Root() root: Post) {
-    return User.findOne({ _id: root.creatorId })
+  creator(@Root() root: Post, @Ctx() { userLoader }: MyContext) {
+    return userLoader.load(root.creatorId)
   }
 
   @Query(() => PaginatedPosts)
